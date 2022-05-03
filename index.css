@@ -1,0 +1,142 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+:root{
+    --hc:#218380;
+    --fc:#ffffff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--hc);
+    padding: 0.5rem;    
+    color:#ffffff;
+}
+
+#time{
+    margin-right:1.5rem;
+
+}
+
+#leaderboard{
+
+    margin: 0 1rem 0 2rem;
+    cursor: pointer;
+    
+}
+
+
+.land-content{
+    border: 2px solid rgb(206, 200, 200);
+    border-radius: 1.5rem;
+    box-shadow: 0.7rem 0.5rem 0.5rem rgb(206, 200, 200) ;
+    width: 70%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem;
+}
+.land-content li{
+    font-size: 14px;
+    list-style-type:decimal;
+    background: var(--hc);
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    color: var(--fc);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+.land-content li:hover{
+    transform: scale(1.008);
+    background-color:rgb(5, 141, 141);
+}
+.land-content .status{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+.land-content h4{
+    margin-bottom: 1rem;
+}
+.land-content h2{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}    
+.land-content h2, p{
+   margin-bottom: 1rem; 
+}
+#btn-start{
+  
+    background: var(--hc);
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    letter-spacing: 0.05rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    transition: all 150ms ease-in;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+#btn-start:hover{
+    transform: translateY(-5%);
+}
+input{
+    height: 100%;
+}
+#save{
+    height: 100%;
+    padding: 0.5rem;
+    letter-spacing: 0.05rem;
+    background: var(--hc);
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+#bottom{
+   
+    display: flex;
+}
+input{
+    border-radius: 0.2rem;
+    border: 1px solid rgb(128,128,128);
+    padding-left: 0.4rem;
+}
+input:focus{
+    border-color: var(--hc);
+}
+#username{
+    
+    width: 60%;
+    margin: 0 auto;
+}
+@media screen and (max-width:620px) {
+    #bottom{
+        flex-direction: column;
+    }
+    #username,
+    #save,input{
+        width:100%;
+        margin-top: 0.2rem;
+    }
+    input{
+        padding:0.3rem 0 0.3rem 0.2rem
+    }
+    .land-content{
+        font-size: 14px;
+    }
+    .land-content li{
+        font-size: 10px;
+    }
+}
