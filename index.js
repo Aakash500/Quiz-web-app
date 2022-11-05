@@ -90,7 +90,8 @@ const scoresDisplay = () =>{
   main.style.maxWidth = "250px";
   timer.textContent = ' ';
   let show = document.createElement('P');
-  show.textContent = `Your score is ${scores}/${questions.length} `;
+  show.textContent = `Total questions ${questions.length} correctly answered ${scores} 
+  and wrong attempts are ${questions.length - scores} `;
   main.appendChild(show);
 }
 
